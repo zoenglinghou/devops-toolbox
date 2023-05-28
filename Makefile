@@ -8,5 +8,8 @@ build:
 create: build
 	distrobox create --image $(image_name) $(container_name)
 
+destroy:
+	distrobox rm --force $(container_name)
+
 enter: create
 	distrobox enter $(container_name)
