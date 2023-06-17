@@ -2,7 +2,7 @@ image_name ?= "devops-toolbox"
 container_name ?= "devops"
 
 build:
-	podman build -t $(image_name) .
+	podman build --pull -t $(image_name) .
 	podman image prune -f
 
 create: build
